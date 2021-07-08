@@ -1,0 +1,19 @@
+.nav-link{
+    color:white
+}
+.nav-link:hover{
+    color: rgb(146, 149, 151);
+}
+.link-white{
+    color:white
+}
+.carousel img {
+    max-height: 480px;
+}
+.text{
+    color: rgb(230, 15, 15);
+}
+.password1{
+    width: 300px;
+    height: 0;
+}

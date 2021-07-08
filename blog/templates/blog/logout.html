@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<div class="container">
+<h2>Logout page</h2>
+{% if messages %}
+{% for message in messages %}
+<div class="form-group">
+<small {% if message.tags %} class='{{message.tags}}'{% endif %} >{{message}}</small>
+</div>
+{% endfor %}
+{% endif %}
+</div>
+{% endblock content %}

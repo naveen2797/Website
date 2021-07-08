@@ -1,0 +1,26 @@
+{% extends 'blog/base.html' %}
+{% block title %}Signup{% endblock title %}
+{% block content %}
+<div class="container">
+<h2 class='text-center my-3'>Sign-up</h2> <hr>
+<div class="row">
+<div class="col-sm-12">
+<form action="" method='POST' novalidate>
+{% csrf_token %}
+   {% if form.non_field_errors %}
+    {% for error in form.non_field_errors %}
+   <p class='text-danger'> {{error}}</p>
+    {% endfor %}
+    {% endif %}
+   {% for fm in form %}
+   <div class="form-group">
+    {{fm.label_tag}}{{fm}}{{fm.errors| striptags}} <br><br>
+   </div>
+   {% endfor %}
+   <input type="submit" value="Submit">
+   
+   </form>
+</div>
+</div>
+</div>
+{% endblock content %}
